@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dployment-demo
+  labels:
+    app: expense
+    tier: frontend
+spec:
+  replicas: 3
+  selectors:
+    matchLabels:
+      app: expense
+      tier: frontend
+template:
+  metadata:
+    app: expense
+    tier: frontend
+  spec:
+    containers:
+    - name: nginx
+      image: nginx
+      ports:
+      - containerPort: 80
+
+

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replica-demo
+  labels:
+    app: expense
+    tier: frontend
+spec:
+  replicas: 3
+  selectors:
+    matchLabels:
+      app: expense
+      tier: frontend
+template:
+  metadata:
+    name: replica-pod
+    labels:
+      app: expense
+      tier: frontend
+  spec: 
+    containers:
+    - name: nginx
+      image: nginx
+      ports:
+      - containerPort: 80
+
+
+
