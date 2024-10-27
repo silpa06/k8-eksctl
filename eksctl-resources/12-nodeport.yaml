@@ -11,4 +11,4 @@ spec:
   ports:
   - port: 80
     protocol: tcp
-    tagetport: 80
+    targetport: 80
