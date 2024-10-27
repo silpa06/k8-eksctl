@@ -2,6 +2,10 @@ apiVersion: v1
 kind: Pod 
 metadata:
   name: podtesting
+  labels: 
+    project: expense
+    module: backend
+    environment: dev
 spec:
   containers:
   - name: almalinux

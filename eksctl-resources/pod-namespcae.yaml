@@ -3,6 +3,10 @@ kind: Pod
 metadata:
   name: podtesting
   namespace: expense 
+  labels:
+    project: expense
+    module: backend
+    environment: dev
 spec:
   containers:
   - name: almalinux
