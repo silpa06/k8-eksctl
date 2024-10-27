@@ -23,7 +23,7 @@ template:
       - containerPort: 80
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: nginx-svc
 spec:
