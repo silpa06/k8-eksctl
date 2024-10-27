@@ -1,0 +1,9 @@
+apiVerion: v1 
+kind: Pod 
+metadata:
+  name: podtesting
+spec:
+  containers:
+  - name: almalinux
+    image: almalinux
+    command: ["sleep", "20000"]
